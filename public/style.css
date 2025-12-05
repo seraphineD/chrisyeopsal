@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 650px;
+  padding: 20px;
+}
+
+.now-playing-card {
+  display: none;
+  align-items: center;
+  background: #c4c4c4;       
+  border-radius: 5px;        
+  padding: 10px;
+  gap: 16px;
+  max-width: 650px;
+  transition: opacity 0.5s ease;
+  margin-top: 20px;
+}
+
+.album-art {
+  width: 65px;
+  height: 65px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.song-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.song-name {
+  font-size: 1em;
+  font-weight: 600;
+  margin: 0;
+}
+
+.artist-name {
+  font-size: 0.9em;
+  color: #555;
+  margin: 0;
+}
+
+.progress-container {
+  position: relative;
+  background: #333;
+  border-radius: 5px;
+  height: 4px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: #1db954;
+  height: 100%;
+  width: 0%;
+  transition: width 0.5s linear;
+}
+
+.time-stamps {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75em;
+  color: #555;
+  margin-top: 2px;
+}
+
+h2 {
+  margin-top: 40px;
+  font-weight: 600;
+  color: #333;
+}
+
+.links {
+  display: flex;
+  gap: 10px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #2575fc;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.links a:hover {
+  color: #1a5bcc;
+  transform: translateY(-2px);
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;      
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  background: #c4c4c4;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 14px 0;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin: 0;
+  color: #222;
+  font-size: 15px;
+}
+
+.card p {
+  margin: 4px 0 0;
+  color: #555;
+  line-height: 1.4;
+}
+
+.card .tag {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.tag-content {
+  display: inline-flex;
+  align-items: center; 
+  gap: 6px; 
+}
+
+.icon-bg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #a6a6a6;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2); 
+}
+
+.icon-dot {
+  width: 16px;
+  height: 16px;
+}
+
+
+body::-webkit-scrollbar {
+  width: 0em;
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex-direction: row;
+    text-align: left;
+  }
+
+}
